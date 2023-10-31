@@ -40,8 +40,7 @@ function getData() {
 
 console.log(typeof bigNumber);
 
-
-// Return type of variables in JavaScript
+// Return type of variables in JavaScript (Copy of the Data)
 // 1) Primitive Datatypes
 //        Number => number
 //        String  => string
@@ -51,7 +50,30 @@ console.log(typeof bigNumber);
 //        Symbol  =>  symbol
 //        BigInt  =>  bigint
 
-// 2) Non-primitive Datatypes
+// 2) Non-primitive Datatypes (Reference of the data)
 //        Arrays  =>  object
 //        Function  =>  function
 //        Object  =>  object
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myYoutubeName = "shsshase";
+
+let anotherName = myYoutubeName;
+anotherName = "ssasdsadas";
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let user1 = {
+  email: "use@gmail.com",
+  upi: "sdsd@mail.com",
+};
+
+let user2 = user1;
+// user2 = JSON.parse(JSON.stringify(user1)); // solution
+
+user1.email = "sdwdsd@mail.com";
+
+console.log(user1);
+console.log(user2);
